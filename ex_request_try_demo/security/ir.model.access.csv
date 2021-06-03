@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+action_partner_demo_request,action_partner_demo_request,model_partner_demo_request,sales_team.group_sale_salesman,1,1,1,0
+action_partner_demo_request_manager,action_partner_demo_request,model_partner_demo_request,sales_team.group_sale_manager,1,1,1,1
+action_database_source_demo,action_database_source_demo,model_database_source_demo,sales_team.group_sale_salesman,1,1,1,0
+action_database_source_demo_manager,action_database_source_demo,model_database_source_demo,sales_team.group_sale_manager,1,1,1,1
+action_try_demo_log,action_try_demo_log,model_try_demo_log,sales_team.group_sale_salesman,1,1,1,0
+action_try_demo_log_manager,action_try_demo_log,model_try_demo_log,sales_team.group_sale_manager,1,1,1,1
+action_demo_user_data,action_demo_user_data,model_demo_user_data,sales_team.group_sale_salesman,1,1,1,0
+action_demo_user_data_manager,action_demo_user_data,model_demo_user_data,sales_team.group_sale_manager,1,1,1,1
