@@ -180,6 +180,7 @@
 		<!--BUSO Fresher Report Menu-->
 		<menuitem 
 			id="menu_partner_demo_request"
+			name="Partner Demo Request"
 			web_icon="ex_request_try_demo,static/src/img/icon.png"
 			sequence="5"/>
 			<menuitem 
