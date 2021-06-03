@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="email_template_user_account" model="mail.template">
+            <field name="name">User Account: Send Mail</field>
+            <field name="model_id" ref="ex_try_demo.model_partner_try_demo"/>
+            <field name="subject">Tomaho's User Account</field>
+            <field name="email_from">${object.sudo().create_uid.email_formatted | safe}</field>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="body_html" type="html">
+
+                <table border="0" cellpadding="0" cellspacing="0" style="padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;"><tbody><tr><td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" width="590" style="padding: 16px; background-color: white; color: #454748; border-collapse:separate;">
+                <tbody>
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                                <tbody>
+                                    <tr>
+                                        <td valign="middle" align="center">
+                                            <span style="font-size: 20px; font-weight: bold;"><strong>Thông tin tài khoản</strong></span>
+                                        
+                                            
+                                        </td>
+                                        <td valign="middle" align="right">
+
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align:center;">
+                                            <hr width="100%" style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- content -->
+                    <tr>
+                        <td align="center" style="min-width: 590px;">
+
+                            <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+
+                                <tbody>
+                                    <tr>
+                                        <td valign="top" style="font-size: 13px;">
+                                            <div>
+                                                Thân gửi ${object.partner_id.name},<br></br>
+                                                Các tài khoản đăng nhập của bạn đã được tạo thành công!<br></br>
+                                                
+                                                Dưới đây là danh sách thông tin các tài khoản:<br></br>
+                                                <div style="margin: 16px 0px 16px 0px;">
+
+                                                    <div style="display:table-row-group;">
+                                                        % for line in object.user_ids:
+                                                            <div style="display:table-row;">
+                                                                <div style="display:table-cell;"><strong>Tên đăng nhập</strong>: ${line.login}</div>
+                                                            </div>
+                                                            <div style="display:table-row;">
+                                                                <div style="display:table-cell;"><strong>Mật khẩu</strong>: ${line.password}</div>
+                                                            </div>
+                                                            <br></br>
+                                                            % endfor
+                                                    </div>
+                                                Để đăng nhập bạn ấn vào link bên dưới: <br></br>
+                                                <a href="http://${object.hostname}:${object.port}/web?db=${object.db_name}">http://${object.hostname}:${object.port}/web?db=${object.db_name}</a><br></br>
+                                                Cảm ơn,
+                                                ${user.signature | safe}
+                                                </div>
+                                         </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    
+
+
+            </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr><td align="center" style="min-width: 590px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;">
+      <tbody><tr><td style="text-align: center; font-size: 13px;">
+        Powered by <a target="_blank" href="https://www.busovn.com/" style="color: #ff0000;">Tomaho</a>
+      </td></tr>
+    </tbody></table>
+</td></tr>
+</tbody>
+</table>
+</field>
+</record>
+    </data>
+</odoo>

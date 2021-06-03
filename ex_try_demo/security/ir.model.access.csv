@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+action_database_source_demo,action_database_source_demo,model_database_source_demo,base.group_user,1,1,1,1
+action_partner_try_demo,action_partner_try_demo,model_partner_try_demo,base.group_user,1,1,1,1
+action_try_demo_log,action_try_demo_log,model_try_demo_log,base.group_user,1,1,1,1
+action_user_data,action_user_data,model_user_data,base.group_user,1,1,1,1

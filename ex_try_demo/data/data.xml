@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<function model='partner.try.demo' name="set_default_tomaho_demo_hostname"/>
+	</data>
+</odoo>
